@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!--code here! -->
+	<package name="default" extends="struts-default">
+
+		<!-- <action name="Welcome" class="actions.UserAction" method="execute"> 
+			<result name="success">/Welcome.jsp</result> <result name="error">/Fail.jsp</result> 
+			</action> -->
+		<action name="2048" class="a0201.a2048">
+			<result>/2048.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>

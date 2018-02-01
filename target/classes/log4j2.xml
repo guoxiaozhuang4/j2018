@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="error">
+	<!-- 先定义所有的appender -->
+	<appenders>
+		<!-- 这个输出控制台的配置 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<ThresholdFilter level="error" />
+			<!-- 这个是输出日志的格式 -->
+			<PatternLayout pattern="%-5level --> %d{HH:mm:ss.SSS} %l - %m%xEx%n" />
+		</Console>
+		<RollingFile name="RollingFile" fileName="logs/j2018.log"
+			filePattern="log/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %l - %m%xEx%n" />
+			<SizeBasedTriggeringPolicy size="50MB" />
+		</RollingFile>
+	</appenders>
+
+	<!-- 然后定义logger，只有定义了logger并引入的appender，appender才会生效 -->
+	<loggers>
+		<!-- 建立一个默认的root的logger -->
+		<root>
+			<appender-ref ref="Console" />
+			<appender-ref ref="RollingFile" />
+		</root>
+		<!-- 相当于阻止冒泡行为 -->
+		<logger name="a0201" level="trace" additivity="false">
+			<appender-ref ref="Console" />
+			<appender-ref ref="RollingFile" />
+		</logger>
+	</loggers>
+</configuration>  
