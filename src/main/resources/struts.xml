@@ -12,7 +12,7 @@
 			<result name="success">/Welcome.jsp</result> <result name="error">/Fail.jsp</result> 
 			</action> -->
 		<action name="2048" class="a0201.a2048">
-			<result>/2048.jsp</result>
+			<result>/WEB-INF/jsp/0202/0051.jsp</result>
 		</action>
 
 

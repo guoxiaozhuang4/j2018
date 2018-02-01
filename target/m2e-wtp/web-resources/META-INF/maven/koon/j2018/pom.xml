@@ -9,11 +9,11 @@
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<!-- tomcat9.0 -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-catalina</artifactId>
 			<version>9.0.4</version>
-		</dependency>
+		</dependency> -->
 		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>

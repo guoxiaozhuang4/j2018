@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+ .loading {
+ 	font-size:12px;
+ 	font-family:"微软雅黑";
+ 	color:red;
+ 	display:none;
+ }
